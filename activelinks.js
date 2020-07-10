@@ -5,13 +5,11 @@ class LinkActive {
     menuLinks, 
     targets, 
     activeClass, 
-    offset = 0, 
     firstScreen = true
   }) {
     this.menuLinks = document.querySelectorAll(menuLinks);
     this.targets = document.querySelectorAll(targets);
     this.activeClass = activeClass;
-    this.offset = offset;
     this.firstScreen = firstScreen;
   }
 
@@ -23,7 +21,7 @@ class LinkActive {
     let scroll = window.pageYOffset;
 
     for (let i = 0; i < this.targets.length; i++) {
-      if (scroll >= this.targets[i].offsetTop - this.offset) {
+      if (scroll >= this.targets[i].offsetTop) {
         for (let anchor of this.menuLinks) {
           anchor.classList.remove(this.activeClass);
         }
