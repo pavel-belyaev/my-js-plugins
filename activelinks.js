@@ -41,3 +41,18 @@ class LinkActive {
     window.addEventListener('scroll', this.addActiveClass.bind(this));
   }
 }
+
+/* 
+
+Usage example:
+
+const activeAnchor = new LinkActive({
+  menuLinks: '.menu-bar__link',
+  targets: 'section',
+  activeClass: 'menu-bar__link_active',
+  firstScreen: false
+});
+
+activeAnchor.init(); 
+
+*/
