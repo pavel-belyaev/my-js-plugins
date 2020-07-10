@@ -21,7 +21,7 @@ class LinkActive {
     let scroll = window.pageYOffset;
 
     for (let i = 0; i < this.targets.length; i++) {
-      if (scroll >= this.targets[i].getBoundingClientRect().top + scroll) {
+      if (scroll >= this.targets[i].getBoundingClientRect().top + scroll - 5) {
         for (let anchor of this.menuLinks) {
           anchor.classList.remove(this.activeClass);
         }
@@ -31,7 +31,7 @@ class LinkActive {
     }
 
     if (!this.firstScreen) {
-      if (scroll < this.targets[0].getBoundingClientRect().top + scroll) {
+      if (scroll < this.targets[0].getBoundingClientRect().top + scroll - 5) {
         this.menuLinks[0].classList.remove(this.activeClass);
       }
     }
