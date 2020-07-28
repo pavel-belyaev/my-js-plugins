@@ -1,3 +1,5 @@
+'use strict';
+
 function sortGallery(params) {
   const navList = document.querySelectorAll(params.nav);
   const wrapper = document.querySelector(params.wrap);
@@ -68,7 +70,7 @@ function sortGallery(params) {
 
 /* 
 
-Usage example
+Usage example:
 
 sortGallery({
   nav: '.vietnam__places-item',
